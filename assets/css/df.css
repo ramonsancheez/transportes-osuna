@@ -11,6 +11,7 @@ body {
   align-items: center;
   height: 120px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 999999999;
 }
 .main-header__trigger {
   background: url("../img/svg/meenu-trigger.svg") center center no-repeat;
@@ -218,4 +219,8 @@ body {
   font-size: 1em;
   line-height: 1.5;
   color: #AFAFAF;
+}
+
+.home-projects {
+  margin: 100px 0;
 }

@@ -1,4 +1,16 @@
 window.addEventListener('DOMContentLoaded', function() {
+
+  var splide = new Splide( '.splide', {
+    type   : 'loop',
+    // autoWidth: true,
+    gap: "5em",
+    focus: 'center',
+    perPage: 3,
+
+  } );
+  
+  splide.mount();
+
   const menuTrigger = document.getElementById('menu-trigger');
   menuTrigger.addEventListener('click', function() {
     const body = document.body;
@@ -10,4 +22,5 @@ window.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     body.classList.remove('outside--show');
   });
+
 });

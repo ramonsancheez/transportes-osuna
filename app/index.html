@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido a transportes osuna</title>
     <link rel="stylesheet" href="/assets/css/df.css">
+    <link rel="stylesheet" href="/node_modules/@splidejs/splide/dist/css/splide.min.css">
     <!-- <link rel="icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon"> -->
+    <script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="/assets/js/main.js"></script> 
 </head>
 <body class="home">
@@ -50,7 +52,6 @@
             </div>
         </div>
     </div>
-    <div class="slider"></div>
 
     <main>
         <section>
@@ -64,7 +65,18 @@
         </section>
 
         <section>
-            <div class="home-projects"></div>
+            <div class="home-projects splide" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="https://placehold.co/600x400"/></li>
+                        <li class="splide__slide"><img src="https://placehold.co/600x400"/></li>
+                        <li class="splide__slide"><img src="https://placehold.co/600x400"/></li>
+                        <li class="splide__slide"><img src="https://placehold.co/600x400"/></li>
+                        <li class="splide__slide"><img src="https://placehold.co/600x400"/></li>
+
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section>
