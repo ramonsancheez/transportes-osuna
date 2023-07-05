@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de tu página</title>
+    <link rel="stylesheet" href="/assets/css/df.css">
+    <script src="/assets/js/main.js"></script> 
+    <script src="ruta/a/tu/archivo-de-scripts.js"></script>
+</head>
+<body>
+    <object data="/app/main-components/header.html"></object>
+
+    <main>
+        <form action="https://formsubmit.co/501cef3a394baa013b73855a4df50fa0" method="POST">
+            <label for="fname">Nombre:</label><br>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="surname">Apellidos:</label><br>
+            <input type="text" id="surname" name="surname"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="phone-number">Teléfono:</label><br>
+            <input type="tel" id="email" name="email"><br><br>
+
+            <label for="subject">Asunto:</label><br>
+            <input type="text" id="subject" name="subject"><br><br>
+
+            <label for="message">Mensaje:</label><br>
+            <input type="message" id="message" name="message"><br><br>
+
+            <input type="hidden" name="_autoresponse" value="Gracias por contactar con nosotros! Su correo ha sido recibido y será contestado lo antes posible">
+            <input type="hidden" name="_template" value="box">
+
+            <input type="submit" value="Submit">
+          </form> 
+    </main>
+    <object data="/app/main-components/footer.html"></object>
+</body>
