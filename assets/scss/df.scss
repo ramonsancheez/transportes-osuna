@@ -2,6 +2,9 @@
 
 body{
     margin: 0 !important;
+    content: '';
+    background: url('#{$root-img}/svg/crane-bg1.svg') 100% 950px no-repeat;
+    overflow-x: hidden;
 }
 
 // HEADER
@@ -17,7 +20,7 @@ body{
         z-index: $z-header;
 
         &__trigger{
-            background: url('../img/svg/meenu-trigger.svg') center center no-repeat;
+            background: url('#{$root-img}/svg/meenu-trigger.svg') center center no-repeat;
             width: 40px;
             height: 15px;
             margin: 0 auto;
@@ -29,7 +32,7 @@ body{
 
         &__phone, &__lng{
             color: $white;
-            font-family: $ff-wyswyg;
+            font-family: $poppins;;
             font-weight: bold;
 
             &:hover{
@@ -45,7 +48,7 @@ body{
 
             &::before{
                 content: '';
-                background: url('../img/svg/call-us.svg') center center no-repeat;
+                background: url('#{$root-img}//svg/call-us.svg') center center no-repeat;
                 width: 20px;
                 height: 20px;
                 display: inline-block;
@@ -61,7 +64,7 @@ body{
 
             &::before{
                 content: '';
-                background: url('../img/svg/chevron-down.svg') center center no-repeat;
+                background: url('#{$root-img}//svg/chevron-down.svg') center center no-repeat;
                 width: 20px;
                 height: 20px;
                 display: inline-block;
@@ -84,10 +87,10 @@ body{
         transition: 0.3s;
         width: 100%;
         height: 100%;
-        z-index: 100000;
+        z-index: $z-outside;
 
         &__close{
-            background: url('../img/svg/close-white.svg') center center no-repeat;
+            background: url('#{$root-img}//svg/close-white.svg') center center no-repeat;
             width: 40px;
             height: 40px;
             display: inline-block;
@@ -105,7 +108,7 @@ body{
         }
 
         &__nav{
-            font-family: $ff;
+            font-family: $red-hat;
             text-align: center;
 
             ul{
@@ -167,19 +170,19 @@ body{
         }
 
         .widget-facebook{
-            background: url('../img/socialmedia/facebook-white.svg') center center no-repeat;
+            background: url('#{$root-img}/socialmedia/facebook-white.svg') center center no-repeat;
         }
 
         .widget-instagram{
-            background: url('../img/socialmedia/instagram-white.svg') center center no-repeat;
+            background: url('#{$root-img}/socialmedia/instagram-white.svg') center center no-repeat;
         }
 
         .widget-whatsapp{
-            background: url('../img/socialmedia/whatsapp-white.svg') center center no-repeat;
+            background: url('#{$root-img}/socialmedia/whatsapp-white.svg') center center no-repeat;
         }
 
         .widget-youtube{
-            background: url('../img/socialmedia/youtube-white.svg') center center no-repeat;
+            background: url('#{$root-img}/socialmedia/youtube-white.svg') center center no-repeat;
         }
 
     }
@@ -200,7 +203,12 @@ body{
             justify-content: space-between;
             max-width: 1240px;
             margin: 50px auto 0;
-            font-family: $ff-wyswyg;
+            font-family: $poppins;;
+        }
+
+        &__title{
+            font-family: $poppins;
+            font-size: calc((28/16)*1em);
         }
 
         &__contact{
@@ -209,7 +217,7 @@ body{
                 align-items: center;
                 &::before{
                     content: '';
-                    background: url('../img/svg/phone-white.svg') center center no-repeat;
+                    background: url('#{$root-img}/svg/phone-white.svg') center center no-repeat;
                     width: 35px;
                     aspect-ratio: 1;
                     display: inline-block;
@@ -221,7 +229,7 @@ body{
                 align-items: center;
                 &::before{
                     content: '';
-                    background: url('../img/svg/email-white.svg') center center no-repeat;
+                    background: url('#{$root-img}/svg/email-white.svg') center center no-repeat;
                     width: 35px;
                     aspect-ratio: 1;
                     display: inline-block;
@@ -241,37 +249,192 @@ body{
         grid-template-columns: 620px 600px;
         gap: 20px;
         justify-content: center;
-        margin-top: 100px;
+        margin: $distance-100 0;
+        // animation: fadeIn 1.5s ease-in;
+        opacity: 1;
 
         &__title{
-            font-family: $ff;
+            font-family: $red-hat;
             font-weight: $ff-bold;
             font-size: calc((32/16)*1em);
+            animation: fadeIn 1.5s ease-in forwards;
+            animation-delay: 0.5s;
+            opacity: 0;
         }
 
         &__wyswyg{
-            font-family: $ff-wyswyg;
+            font-family: $poppins;;
             font-size: calc((16/16)*1em);
             line-height: 1.5;
             color: $text-color;
+            opacity: 0;
+            margin-top: 0;
+            animation: fadeIn 1.5s ease-in forwards;
+            animation-delay: 1s;
         }
     }
 
     .home-projects{
-        margin: $distance-100 0;
+        padding: $distance-100 0;
+        background-color: rgba(175,175,175,0.2);
+
+        &__title{
+            font-family: $red-hat;
+            font-weight: $ff-bold;
+            font-size: calc((32/16)*1em);
+            text-align: center;
+        }
+    }
+
+    hr{
+        content: '';
+        background: url('#{$root-img}/svg/footer-hr.svg') center center;
+        width: auto;
+        height:60px;
+        margin:0;
+        border: none;
+    }
+
+    .home-services{
+        padding: $distance-100 0;
+
+        &__title{
+            font-family: $red-hat;
+            font-weight: $ff-bold;
+            font-size: calc((32/16)*1em);
+            text-align: center;
+        }
+
+        &__list{
+            display: grid;
+            list-style: none;
+            grid-template-columns: repeat(3, 375px);
+            gap: 90px;
+            justify-content: center;
+            margin-top: $distance-20;
+
+            &:first-child{
+                animation: goUp 3s ease-in forwards;
+            }
+            &:nth-child(2){
+                animation: goUp 2s ease-in forwards;
+            }
+            &:last-child{
+                animation: goUp 1s ease-in forwards;
+            }
+        }
+
+        &__service{
+            &-title{
+                font-family: $red-hat;
+                font-weight: $ff-bold;
+                font-size: calc((28/16)*1em);
+                margin-bottom: calc(($distance-20) / 2);
+                color: $second-color;
+            }
+
+            &-wyswyg{
+                font-family: $poppins;;
+                font-size: calc((16/16)*1em);
+                line-height: 1.5;
+                color: $text-color;
+            }
+        }
+
+        &__link{
+            font-family: $poppins;
+            font-size: calc((16/16)*1em);
+            text-align: center;
+            margin-top: $distance-50;
+            text-decoration: underline;
+
+            &:hover{
+                cursor: pointer;
+                opacity: .7;
+                transition: 0.2s;
+            }
+        }
     }
 
 // SLIDER
-// .splide{
-//     &__slide{
-//         img{
-//             width: 500px;
-//             height: 330px;
-//         }
-//     }
-// }
+    #splide1{
+        .splide{
+            &__slide{
+                img{
+                    transform: scale(0.85);
+                    transition: 0.5s;
+                }
+            }
 
-// .splide__slide.is-active img{
-//     transform: scale(1.3);
-//     transition: 0.3s;
-// }
+            &__track{
+                margin-top: $distance-20;
+            }
+
+            &__pagination{
+                transform: translateY(-50px);
+            }
+
+            &__pagination__page.is-active{
+                background-color: $second-color !important;
+            }
+        }
+    }
+
+    #splide1{
+        .splide__slide.is-active img{
+            transform: scale(1);
+            transition: 0.5s;
+        }
+    }
+
+    #splide2{
+        .splide__arrow{
+            background-color: transparent;
+            top: 87%;
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            &--prev{
+                left: 5%;
+            }
+
+            &--next{
+                left: 9%;
+            }
+        }
+        .splide{
+            &__title{
+                position: absolute;
+                top:40%;
+                z-index: 999;
+                text-align: center;
+                width: 100%;
+                color: $white;
+                font-family: $sarala;
+                font-size: calc((64/16)*1em);
+            }
+        }
+
+    }
+
+//ANIMATIONS
+    @keyframes fadeIn{
+        from{
+            transform: translateX(100%);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes goUp{
+        from{
+            transform: translateY(100%);
+        }
+        to{
+            transform: translateY(0);
+        }
+    }

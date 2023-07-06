@@ -1,5 +1,8 @@
 body {
   margin: 0 !important;
+  content: "";
+  background: url("/assets/img//svg/crane-bg1.svg") 100% 950px no-repeat;
+  overflow-x: hidden;
 }
 
 .main-header {
@@ -11,10 +14,10 @@ body {
   align-items: center;
   height: 120px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  z-index: 999999999;
+  z-index: 99999999;
 }
 .main-header__trigger {
-  background: url("../img/svg/meenu-trigger.svg") center center no-repeat;
+  background: url("/assets/img//svg/meenu-trigger.svg") center center no-repeat;
   width: 40px;
   height: 15px;
   margin: 0 auto;
@@ -39,7 +42,7 @@ body {
 }
 .main-header__phone::before {
   content: "";
-  background: url("../img/svg/call-us.svg") center center no-repeat;
+  background: url("/assets/img///svg/call-us.svg") center center no-repeat;
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -53,7 +56,7 @@ body {
 }
 .main-header__lng::before {
   content: "";
-  background: url("../img/svg/chevron-down.svg") center center no-repeat;
+  background: url("/assets/img///svg/chevron-down.svg") center center no-repeat;
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -73,10 +76,10 @@ body {
   transition: 0.3s;
   width: 100%;
   height: 100%;
-  z-index: 100000;
+  z-index: 999999999;
 }
 .outside__close {
-  background: url("../img/svg/close-white.svg") center center no-repeat;
+  background: url("/assets/img///svg/close-white.svg") center center no-repeat;
   width: 40px;
   height: 40px;
   display: inline-block;
@@ -144,16 +147,16 @@ body {
   width: 100%;
 }
 .widget-socialmedia .widget-facebook {
-  background: url("../img/socialmedia/facebook-white.svg") center center no-repeat;
+  background: url("/assets/img//socialmedia/facebook-white.svg") center center no-repeat;
 }
 .widget-socialmedia .widget-instagram {
-  background: url("../img/socialmedia/instagram-white.svg") center center no-repeat;
+  background: url("/assets/img//socialmedia/instagram-white.svg") center center no-repeat;
 }
 .widget-socialmedia .widget-whatsapp {
-  background: url("../img/socialmedia/whatsapp-white.svg") center center no-repeat;
+  background: url("/assets/img//socialmedia/whatsapp-white.svg") center center no-repeat;
 }
 .widget-socialmedia .widget-youtube {
-  background: url("../img/socialmedia/youtube-white.svg") center center no-repeat;
+  background: url("/assets/img//socialmedia/youtube-white.svg") center center no-repeat;
 }
 
 .main-footer {
@@ -174,13 +177,17 @@ body {
   margin: 50px auto 0;
   font-family: "Poppins", sans-serif;
 }
+.main-footer__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.75em;
+}
 .main-footer__contact-phone {
   display: flex;
   align-items: center;
 }
 .main-footer__contact-phone::before {
   content: "";
-  background: url("../img/svg/phone-white.svg") center center no-repeat;
+  background: url("/assets/img//svg/phone-white.svg") center center no-repeat;
   width: 35px;
   aspect-ratio: 1;
   display: inline-block;
@@ -192,7 +199,7 @@ body {
 }
 .main-footer__contact-email::before {
   content: "";
-  background: url("../img/svg/email-white.svg") center center no-repeat;
+  background: url("/assets/img//svg/email-white.svg") center center no-repeat;
   width: 35px;
   aspect-ratio: 1;
   display: inline-block;
@@ -207,20 +214,158 @@ body {
   grid-template-columns: 620px 600px;
   gap: 20px;
   justify-content: center;
-  margin-top: 100px;
+  margin: 100px 0;
+  opacity: 1;
 }
 .home-welcome__title {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 600;
   font-size: 2em;
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 .home-welcome__wyswyg {
   font-family: "Poppins", sans-serif;
   font-size: 1em;
   line-height: 1.5;
   color: #AFAFAF;
+  opacity: 0;
+  margin-top: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 1s;
 }
 
 .home-projects {
-  margin: 100px 0;
+  padding: 100px 0;
+  background-color: rgba(175, 175, 175, 0.2);
+}
+.home-projects__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+}
+
+hr {
+  content: "";
+  background: url("/assets/img//svg/footer-hr.svg") center center;
+  width: auto;
+  height: 60px;
+  margin: 0;
+  border: none;
+}
+
+.home-services {
+  padding: 100px 0;
+}
+.home-services__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+}
+.home-services__list {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(3, 375px);
+  gap: 90px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.home-services__list:first-child {
+  animation: goUp 3s ease-in forwards;
+}
+.home-services__list:nth-child(2) {
+  animation: goUp 2s ease-in forwards;
+}
+.home-services__list:last-child {
+  animation: goUp 1s ease-in forwards;
+}
+.home-services__service-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 600;
+  font-size: 1.75em;
+  margin-bottom: 10px;
+  color: #FF3131;
+}
+.home-services__service-wyswyg {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #AFAFAF;
+}
+.home-services__link {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 50px;
+  text-decoration: underline;
+}
+.home-services__link:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+#splide1 .splide__slide img {
+  transform: scale(0.85);
+  transition: 0.5s;
+}
+#splide1 .splide__track {
+  margin-top: 20px;
+}
+#splide1 .splide__pagination {
+  transform: translateY(-50px);
+}
+#splide1 .splide__pagination__page.is-active {
+  background-color: #FF3131 !important;
+}
+
+#splide1 .splide__slide.is-active img {
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+#splide2 .splide__arrow {
+  background-color: transparent;
+  top: 87%;
+}
+#splide2 .splide__arrow svg {
+  width: 40px;
+  height: 40px;
+}
+#splide2 .splide__arrow--prev {
+  left: 5%;
+}
+#splide2 .splide__arrow--next {
+  left: 9%;
+}
+#splide2 .splide__title {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  text-align: center;
+  width: 100%;
+  color: #FFFFFF;
+  font-family: "Sarala", sans-serif;
+  font-size: 4em;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes goUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

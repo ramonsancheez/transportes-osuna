@@ -3,14 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de tu página</title>
+    <title>Bienvenido a transportes osuna</title>
     <link rel="stylesheet" href="/assets/css/df.css">
+    <link rel="stylesheet" href="/node_modules/@splidejs/splide/dist/css/splide.min.css">
+    <!-- <link rel="icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon"> -->
+    <script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="/assets/js/main.js"></script> 
-    <script src="ruta/a/tu/archivo-de-scripts.js"></script>
 </head>
 <body>
-    <object data="/app/main-components/header.html"></object>
-
+    <header class="main-header">
+        <div id="menu-trigger" class="main-header__trigger"></div>
+        <div class="logo">
+            <a href="/app">
+                <img src="/assets/img/logo/logo.svg">
+            </a>
+        </div>
+        <div class="main-header__phone">
+            <p>Llámanos</p>
+        </div>
+        <div class="main-header__lng">
+            <p>ESP</p>
+        </div>
+    </header>
+    <div class="outside">
+        <a id="close__outside" class="outside__close"></a>
+        <div class="outside__container">
+            <div class="logo">
+                <a href="/app">
+                    <img src="/assets/img/logo/logo.svg">
+                </a>
+            </div>
+            <nav class="outside__nav">
+                <ul>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Nuestros camiones</a></li>
+                    <li><a href="#">Nuestros servicios</a></li>
+                    <li><a href="/app/form.html">Contáctanos</a></li>
+                    <li><a href="#">Nuestros proyectos</a></li>
+                </ul>
+            </nav>
+            <div class="widget-socialmedia">
+                <div class="widget-facebook"></div>
+                <div class="widget-instagram"></div>
+                <div class="widget-whatsapp"></div>
+                <div class="widget-youtube"></div>
+            </div>
+        </div>
+    </div>
+    <div class="splide" id="splide2">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide"><img src="https://picsum.photos/1920/800"/></li>
+                <li class="splide__slide"><img src="https://picsum.photos/1920/800"/></li>
+                <li class="splide__slide"><img src="https://picsum.photos/1920/800"/></li>
+                <li class="splide__slide"><img src="https://picsum.photos/1920/800"/></li>
+            </ul>
+        </div>
+    </div>
     <main>
         <form action="https://formsubmit.co/501cef3a394baa013b73855a4df50fa0" method="POST">
             <label for="fname">Nombre:</label><br>
@@ -37,5 +87,28 @@
             <input type="submit" value="Submit">
           </form> 
     </main>
-    <object data="/app/main-components/footer.html"></object>
+    <hr>
+    <footer class="main-footer">
+        <div class="logo__footer">
+            <a href="/app">
+                <img src="/assets/img/logo/logo-footer.svg">
+            </a>
+        </div>
+        <div class="main-footer__content">
+            <div class="main-footer__contact">
+                <h3 class="main-footer__title">Contacta con nosotros</h3>
+                <p class="main-footer__contact-phone">+34 633 70 84 83</p>
+                <p class="main-footer__contact-email">transportesygruasosuna@gmail.com</p>
+            </div>
+            <div class="main-footer__socialmedia">
+                <h3 class="main-footer__title">Nuestras redes sociales</h3>
+                <div class="widget-socialmedia">
+                    <div class="widget-facebook"></div>
+                    <div class="widget-instagram"></div>
+                    <div class="widget-whatsapp"></div>
+                    <div class="widget-youtube"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>

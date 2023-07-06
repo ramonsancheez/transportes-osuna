@@ -5,9 +5,9 @@ $text-color: #AFAFAF;
 $second-color: #FF3131;
 
 //font-family
-$ff-wyswyg: 'Poppins', sans-serif;
-$ff-title: 'Sarala', sans-serif;
-$ff: 'Red Hat Display', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$sarala: 'Sarala', sans-serif;
+$red-hat: 'Red Hat Display', sans-serif;
 $ff-bold: 600;
 $ff-regular: 400;
 $ff-light: 300;
@@ -16,9 +16,12 @@ $ff-light: 300;
 $header-height: 120px;
 $root-img: '/assets/img/';
 $distance-20: 20px;
+$distance-50: 50px;
 $distance-100: 100px;
+$hr-height: 60px; 
 $distance-200: 200px;
 
 // z-index
-$z-header: 999999999;
+$z-outside: 999999999;
+$z-header: 99999999;
 
