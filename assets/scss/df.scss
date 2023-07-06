@@ -313,6 +313,9 @@ body{
             justify-content: center;
             margin-top: $distance-20;
 
+        }
+        
+        &__service{
             &:first-child{
                 animation: goUp 3s ease-in forwards;
             }
@@ -322,9 +325,7 @@ body{
             &:last-child{
                 animation: goUp 1s ease-in forwards;
             }
-        }
-
-        &__service{
+            
             &-title{
                 font-family: $red-hat;
                 font-weight: $ff-bold;
