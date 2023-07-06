@@ -1,8 +1,16 @@
 body {
   margin: 0 !important;
+  overflow-x: hidden;
+}
+
+body.home {
   content: "";
   background: url("/assets/img//svg/crane-bg1.svg") 100% 950px no-repeat;
-  overflow-x: hidden;
+}
+
+body.formulario {
+  content: "";
+  background: url("/assets/img//svg/crane-bg1.svg") 100% no-repeat;
 }
 
 .main-header {
@@ -274,10 +282,10 @@ hr {
   margin-top: 20px;
 }
 .home-services__service:first-child {
-  animation: goUp 3s ease-in forwards;
+  animation: goUp 2s ease-in forwards;
 }
 .home-services__service:nth-child(2) {
-  animation: goUp 2s ease-in forwards;
+  animation: goUp 1.5s ease-in forwards;
 }
 .home-services__service:last-child {
   animation: goUp 1s ease-in forwards;
@@ -350,6 +358,73 @@ hr {
   color: #FFFFFF;
   font-family: "Sarala", sans-serif;
   font-size: 4em;
+}
+
+.form {
+  max-width: 1280px;
+  margin: 100px auto;
+}
+.form__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px 0 0;
+}
+.form__wyswyg {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #AFAFAF;
+  margin-top: 20px;
+}
+.form-helper {
+  display: flex;
+}
+.form form {
+  margin-top: 50px;
+}
+.form form .form-row {
+  margin-bottom: 10px;
+}
+.form form label {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.form form input {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.form form .form-row label {
+  display: block;
+}
+.form form input {
+  height: 30px;
+}
+.form form #name {
+  width: 440px;
+  margin-right: 100px;
+}
+.form form #surname {
+  width: 730px;
+}
+.form form #email {
+  width: 660px;
+  margin-right: 105px;
+}
+.form form #phone-number {
+  width: 505px;
+}
+.form form #subject {
+  width: 100%;
+}
+.form form textarea {
+  width: 100%;
+  height: 200px;
 }
 
 @keyframes fadeIn {

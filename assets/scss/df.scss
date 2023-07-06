@@ -2,9 +2,15 @@
 
 body{
     margin: 0 !important;
+    overflow-x: hidden;
+}
+body.home{
     content: '';
     background: url('#{$root-img}/svg/crane-bg1.svg') 100% 950px no-repeat;
-    overflow-x: hidden;
+}
+body.formulario{
+    content: '';
+    background: url('#{$root-img}/svg/crane-bg1.svg') 100% no-repeat;
 }
 
 // HEADER
@@ -317,10 +323,10 @@ body{
         
         &__service{
             &:first-child{
-                animation: goUp 3s ease-in forwards;
+                animation: goUp 2s ease-in forwards;
             }
             &:nth-child(2){
-                animation: goUp 2s ease-in forwards;
+                animation: goUp 1.5s ease-in forwards;
             }
             &:last-child{
                 animation: goUp 1s ease-in forwards;
@@ -419,6 +425,83 @@ body{
         }
 
     }
+
+// FORM
+.form{
+    max-width: 1280px;
+    margin: $distance-100 auto;
+    &__title{
+        font-family: $red-hat;
+        font-weight: $ff-bold;
+        font-size: calc((32/16)*1em);
+        text-align: center;
+        margin-bottom: $distance-50 0 0;
+    }
+
+    &__wyswyg{
+        font-family: $poppins;;
+        font-size: calc((16/16)*1em);
+        line-height: 1.5;
+        color: $text-color;
+        margin-top: $distance-20;
+    }
+
+    &-helper{
+        display: flex;
+    }
+    form {
+        margin-top: $distance-50;
+        .form-row {
+            margin-bottom: 10px;
+        }
+
+        label{
+            font-family: $red-hat;
+            font-size: calc((16/16)*1em);
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-top: $distance-20;
+        }
+
+        input {
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+            border: 1px solid black;
+            border-radius: 5px;
+          }
+          
+        .form-row label {
+            display: block;
+        }
+
+        input{
+            height: 30px;
+        }
+
+        #name{
+            width: 440px;
+            margin-right: 100px;
+        }
+        #surname{
+            width: 730px;
+        }
+        #email{
+            width: 660px;
+            margin-right: 105px;
+        }
+        #phone-number{
+            width:505px
+        }
+        #subject{
+            width: 100%;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+          }
+    }
+      
+}
 
 //ANIMATIONS
     @keyframes fadeIn{
