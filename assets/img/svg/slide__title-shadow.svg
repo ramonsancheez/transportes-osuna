@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="810px" height="291px" viewBox="0 0 810 291" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Oval</title>
+    <defs>
+        <filter x="-17.5%" y="-129.6%" width="135.0%" height="359.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="35" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.400000006">
+        <g id="abba-Hoteles---Hotel" transform="translate(-315, -288)" fill="#000000">
+            <g id="Foto" transform="translate(0, 120)">
+                <ellipse id="Oval" filter="url(#filter-1)" cx="720" cy="313.5" rx="300" ry="40.5"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

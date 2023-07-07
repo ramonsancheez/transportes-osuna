@@ -2,6 +2,9 @@ body {
   margin: 0 !important;
   overflow-x: hidden;
 }
+body .outside--show {
+  overflow: hidden;
+}
 
 body.home {
   content: "";
@@ -130,10 +133,13 @@ body.formulario {
 
 .widget-socialmedia {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 20px;
   margin-top: 50px;
+  justify-content: start;
+}
+.outside--show .widget-socialmedia {
+  justify-content: center;
 }
 .widget-socialmedia .widget-facebook, .widget-socialmedia .widget-instagram, .widget-socialmedia .widget-whatsapp, .widget-socialmedia .widget-youtube {
   content: "";
@@ -229,8 +235,6 @@ body.formulario {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 600;
   font-size: 2em;
-  animation: fadeIn 1.5s ease-in forwards;
-  animation-delay: 0.5s;
   opacity: 0;
 }
 .home-welcome__wyswyg {
@@ -240,8 +244,6 @@ body.formulario {
   color: #AFAFAF;
   opacity: 0;
   margin-top: 0;
-  animation: fadeIn 1.5s ease-in forwards;
-  animation-delay: 1s;
 }
 
 .home-projects {
@@ -281,14 +283,8 @@ hr {
   justify-content: center;
   margin-top: 20px;
 }
-.home-services__service:first-child {
-  animation: goUp 2s ease-in forwards;
-}
-.home-services__service:nth-child(2) {
-  animation: goUp 1.5s ease-in forwards;
-}
-.home-services__service:last-child {
-  animation: goUp 1s ease-in forwards;
+.home-services__service {
+  opacity: 0;
 }
 .home-services__service-title {
   font-family: "Red Hat Display", sans-serif;
@@ -427,6 +423,10 @@ hr {
   height: 200px;
 }
 
+.animate--fade {
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
 @keyframes fadeIn {
   from {
     transform: translateX(100%);
@@ -436,11 +436,22 @@ hr {
     transform: translateX(0);
   }
 }
+.animate--goUp:first-child {
+  animation: goUp 2s ease-in forwards;
+}
+.animate--goUp:nth-child(2) {
+  animation: goUp 1.5s ease-in forwards;
+}
+.animate--goUp:last-child {
+  animation: goUp 1s ease-in forwards;
+}
+
 @keyframes goUp {
   from {
     transform: translateY(100%);
   }
   to {
+    opacity: 1;
     transform: translateY(0);
   }
-}
+}/*# sourceMappingURL=df.css.map */

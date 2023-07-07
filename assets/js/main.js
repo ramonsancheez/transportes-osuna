@@ -38,3 +38,50 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
 });
+
+window.addEventListener('load', function() {
+  const homeWelcome = document.querySelectorAll('.home-welcome__title, .home-welcome__wyswyg');
+  if(homeWelcome){
+      const options = { 
+          root: null,
+          threshold: 1,
+          rootMargin: "-150px"
+      };
+      const observer = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(entry => {
+              if(!entry.isIntersecting){
+                  return; 
+              }
+              entry.target.classList.toggle("animate--fade");
+              observer.unobserve(entry.target);
+          })
+      }, options);
+      
+      homeWelcome.forEach(listArticle => {
+          observer.observe(listArticle);
+      })
+  }
+
+  const homeServices = document.querySelectorAll('.home-services__service');
+  if(homeServices){
+      const options = { 
+          root: null,
+          threshold: 0,
+          rootMargin: "-10px",
+      };
+      const observer = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(entry => {
+              if(!entry.isIntersecting){
+                  return; 
+              }
+              entry.target.classList.toggle("animate--goUp");
+              observer.unobserve(entry.target);
+          })
+      }, options);
+      
+      homeServices.forEach(listArticle => {
+          observer.observe(listArticle);
+      })
+  }
+
+});
