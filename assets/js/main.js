@@ -40,6 +40,10 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('load', function() {
+
+  const spinner = document.querySelector('.loading');
+  spinner.style.display = 'none';
+
   const homeWelcome = document.querySelectorAll('.home-welcome__title, .home-welcome__wyswyg');
   if(homeWelcome){
       const options = { 
