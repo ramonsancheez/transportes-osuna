@@ -1,29 +1,35 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-  var splide = new Splide( '#splide1', {
-    type   : 'loop',
-    gap: "5em",
-    focus: 'center',
-    perPage: 3,
-    autoplay: true,
-    interval: 2500,
-    arrows: false,
-    breakpoints: {
-      767: {
-        perPage: 1,
+  var splide1Element = document.querySelector("#splide1");
+  if (splide1Element !== null) {
+    var splide1 = new Splide(splide1Element, {
+      type: 'loop',
+      gap: "5em",
+      focus: 'center',
+      perPage: 3,
+      autoplay: true,
+      interval: 2500,
+      arrows: false,
+      breakpoints: {
+        767: {
+          perPage: 1,
+        }
       }
-    }
+    });
+    splide1.mount();
+  }
 
-  } );
-  splide.mount();
 
-  var splide2 = new Splide('#splide2', {
-    type: 'loop',
-    perPage: 1,
-    pagination: false,
-  });
-  
-  splide2.mount();
+  var splide2Element = document.querySelector("#splide2");
+  if (splide2Element !== null) {
+    var splide2 = new Splide('#splide2', {
+      type: 'loop',
+      perPage: 1,
+      pagination: false,
+    });
+    
+    splide2.mount();
+  }
 
   const menuTrigger = document.getElementById('menu-trigger');
   menuTrigger.addEventListener('click', function() {
@@ -42,7 +48,7 @@ window.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', function() {
 
   const spinner = document.querySelector('.loading');
-  spinner.style.display = 'none';
+  spinner.remove();
 
   const homeWelcome = document.querySelectorAll('.home-welcome__title, .home-welcome__wyswyg');
   if(homeWelcome){
