@@ -12,6 +12,30 @@
     <script src="/assets/js/main.js"></script> 
 </head>
 <body class="formulario">
+    <div class="loading">
+        <div CLASS="loading-circles">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+        </div>
+    </div>
     <header class="main-header">
         <div id="menu-trigger" class="main-header__trigger"></div>
         <div class="logo">
@@ -57,49 +81,64 @@
             <h2 class="form__title">Formulario de contacto</h2>
             <div class="form__wyswyg">Phasellus tempus purus sed augue consectetur porta ut ac turpis. Curabitur sem nisi, blandit id erat at, dapibus egestas odio. Curabitur at est imperdiet, porta libero facilisis, sodales nunc. Donec feugiat varius nisi, sed dignissim risus finibus at. Phasellus tempus purus sed augue consectetur porta ut ac turpis. Curabitur sem nisi, blandit id erat at, dapibus egestas odio. Curabitur at est imperdiet, porta libero facilisis, sodales nunc. Donec feugiat varius nisi, sed dignissim risus finibus at. </div>
             
-            <form action="https://formsubmit.co/501cef3a394baa013b73855a4df50fa0" method="POST">
-                <div class="form-helper">
-                    <div class="form-row">
-                        <label for="fname">Nombre:</label>
-                        <input type="text" id="name" name="name">
+                <form action="https://formsubmit.co/501cef3a394baa013b73855a4df50fa0" method="POST">
+                    <div class="form-helper">
+                        <div class="form-row">
+                            <label for="fname">Nombre:</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                    
+                        <div class="form-row">
+                            <label for="surname">Apellidos:</label>
+                            <input type="text" id="surname" name="surname">
+                        </div>
+                    </div>
+                
+                    <div class="form-helper">
+                        <div class="form-row">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    
+                        <div class="form-row">
+                            <label for="phone-number">Teléfono:</label>
+                            <input type="tel" id="phone-number" name="phone-number">
+                        </div>
                     </div>
                 
                     <div class="form-row">
-                        <label for="surname">Apellidos:</label>
-                        <input type="text" id="surname" name="surname">
-                    </div>
-                </div>
-              
-                <div class="form-helper">
-                    <div class="form-row">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email">
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject">
                     </div>
                 
                     <div class="form-row">
-                        <label for="phone-number">Teléfono:</label>
-                        <input type="tel" id="phone-number" name="phone-number">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                
+                    <input type="hidden" name="_autoresponse" value="Gracias por contactar con nosotros! Su correo ha sido recibido y será contestado lo antes posible">
+                    <input type="hidden" name="_template" value="box">
+                
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+            
+            <section>
+                <div id="splide1" class="home-projects splide" aria-label="Splide Basic HTML Example">
+                    <h2 class="home-projects__title">Algunos de nuestros proyectos</h2>
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><img src="https://picsum.photos/600/400"/></li>
+                            <li class="splide__slide"><img src="https://picsum.photos/600/400"/></li>
+                            <li class="splide__slide"><img src="https://picsum.photos/600/400"/></li>
+                            <li class="splide__slide"><img src="https://picsum.photos/600/400"/></li>
+                            <li class="splide__slide"><img src="https://picsum.photos/600/400"/></li>
+    
+                        </ul>
                     </div>
                 </div>
-              
-                <div class="form-row">
-                  <label for="subject">Asunto:</label>
-                  <input type="text" id="subject" name="subject">
-                </div>
-              
-                <div class="form-row">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message"></textarea>
-                </div>
-              
-                <input type="hidden" name="_autoresponse" value="Gracias por contactar con nosotros! Su correo ha sido recibido y será contestado lo antes posible">
-                <input type="hidden" name="_template" value="box">
-              
-                <input type="submit" value="Enviar">
-              </form>
-              
-              
-        </div>
+            </section>
+                 
     </main>
     <hr>
     <footer class="main-footer">
