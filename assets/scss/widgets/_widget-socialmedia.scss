@@ -1,0 +1,50 @@
+.widget-socialmedia{
+    display: flex;
+    align-items: center;
+    gap: $distance-20;
+    margin-top: 50px;
+    justify-content: start;
+
+    .outside--show &{
+        justify-content: center;
+    }
+
+    .widget-facebook, .widget-instagram, .widget-whatsapp, .widget-youtube {
+        content: '';
+        width: 40px;
+        height: 40px;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: $second-color;
+            height: 3px;
+            width: 0;
+            bottom: -10px;
+            left: 0;
+            transition: 0.3s;
+        }
+
+        &:hover::after{
+            width: 100%;
+        }
+    }
+
+    .widget-facebook{
+        background: url('#{$root-img}/socialmedia/facebook-white.svg') center center no-repeat;
+    }
+
+    .widget-instagram{
+        background: url('#{$root-img}/socialmedia/instagram-white.svg') center center no-repeat;
+    }
+
+    .widget-whatsapp{
+        background: url('#{$root-img}/socialmedia/whatsapp-white.svg') center center no-repeat;
+    }
+
+    .widget-youtube{
+        background: url('#{$root-img}/socialmedia/youtube-white.svg') center center no-repeat;
+    }
+
+}

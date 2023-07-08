@@ -1,0 +1,52 @@
+.home-services{
+    padding: $distance-100 0;
+
+    &__title{
+        font-family: $ff-title;
+        font-weight: $ff-bold;
+        font-size: calc((32/16)*1em);
+        text-align: center;
+    }
+
+    &__list{
+        display: grid;
+        list-style: none;
+        grid-template-columns: repeat(3, 375px);
+        gap: 90px;
+        justify-content: center;
+        margin-top: $distance-20;
+
+    }
+    
+    &__service{
+        opacity: 0;
+        &-title{
+            font-family: $ff-title;
+            font-weight: $ff-bold;
+            font-size: calc((28/16)*1em);
+            margin-bottom: calc(($distance-20) / 2);
+            color: $second-color;
+        }
+
+        &-wyswyg{
+            font-family: $ff-wyswyg;
+            font-size: calc((16/16)*1em);
+            line-height: 1.5;
+            color: $text-color;
+        }
+    }
+
+    &__link{
+        font-family: $ff-wyswyg;
+        font-size: calc((16/16)*1em);
+        text-align: center;
+        margin-top: $distance-50;
+        text-decoration: underline;
+
+        &:hover{
+            cursor: pointer;
+            opacity: .7;
+            transition: 0.2s;
+        }
+    }
+}

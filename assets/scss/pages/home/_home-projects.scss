@@ -1,0 +1,11 @@
+.home-projects{
+    padding: $distance-100 0;
+    background-color: rgba(175,175,175,0.2);
+
+    &__title{
+        font-family: $ff-title;
+        font-weight: $ff-bold;
+        font-size: calc((32/16)*1em);
+        text-align: center;
+    }
+}

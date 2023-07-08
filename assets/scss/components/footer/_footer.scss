@@ -1,0 +1,54 @@
+.main-footer{
+    background-color: $black;
+    position: sticky;
+    top: 100vh;
+    padding: 50px 30px 100px;
+    .logo__footer{
+        display: grid;
+        justify-content: center;
+    }
+    &__content{
+        display: flex;
+        color: $white;
+        justify-content: space-between;
+        max-width: 1240px;
+        margin: 50px auto 0;
+        font-family: $ff-wyswyg;
+    }
+
+    &__title{
+        font-family: $ff-wyswyg;
+        font-size: calc((28/16)*1em);
+    }
+
+    &__contact{
+        &-phone{
+            display: flex;
+            align-items: center;
+            &::before{
+                content: '';
+                background: url('#{$root-img}/svg/phone-white.svg') center center no-repeat;
+                width: 35px;
+                aspect-ratio: 1;
+                display: inline-block;
+                margin-right: calc(($distance-20) / 2);
+            }
+        }
+        &-email{
+            display: flex;
+            align-items: center;
+            &::before{
+                content: '';
+                background: url('#{$root-img}/svg/email-white.svg') center center no-repeat;
+                width: 35px;
+                aspect-ratio: 1;
+                display: inline-block;
+                margin-right: calc(($distance-20) / 2);
+            }
+        }
+    }
+
+    .widget-socialmedia{
+        margin-top: calc(($distance-20) / 2);
+    }
+}

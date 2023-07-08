@@ -1,0 +1,25 @@
+.home-welcome{
+    display: grid;
+    grid-template-columns: 620px 600px;
+    gap: 20px;
+    justify-content: center;
+    margin: $distance-100 0;
+    // animation: fadeIn 1.5s ease-in;
+    opacity: 1;
+
+    &__title{
+        font-family: $ff-title;
+        font-weight: $ff-bold;
+        font-size: calc((32/16)*1em);
+        opacity: 0;
+    }
+
+    &__wyswyg{
+        font-family: $ff-wyswyg;
+        font-size: calc((16/16)*1em);
+        line-height: 1.5;
+        color: $text-color;
+        opacity: 0;
+        margin-top: 0;
+    }
+}

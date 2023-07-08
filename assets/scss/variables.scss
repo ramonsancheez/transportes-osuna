@@ -1,13 +1,17 @@
 // colors
 $white: #FFFFFF;
 $black: #000000;
-$text-color: #AFAFAF;
+$text-color: rgba(0, 0, 0, 0.8);
 $second-color: #FF3131;
 
 //font-family
-$poppins: 'Poppins', sans-serif;
+
+$ff-title:'Oswald', sans-serif;
+// $ff-subtitle:;
+$ff-wyswyg: 'Open Sans', sans-serif;
+// $poppins: 'Poppins', sans-serif;
 $sarala: 'Sarala', sans-serif;
-$red-hat: 'Red Hat Display', sans-serif;
+
 $ff-bold: 600;
 $ff-regular: 400;
 $ff-light: 300;

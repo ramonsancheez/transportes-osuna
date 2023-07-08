@@ -1,0 +1,64 @@
+.main-header{
+    position: sticky;
+    top: 0;
+    background-color: $black;
+    display: grid;
+    grid-template-columns: 60px 1fr auto auto;
+    align-items: center;
+    height: $header-height;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: $z-header;
+
+    &__trigger{
+        background: url('#{$root-img}/svg/meenu-trigger.svg') center center no-repeat;
+        width: 40px;
+        height: 15px;
+        margin: 0 auto;
+        &:hover{
+            cursor: pointer;
+            opacity: .7;
+        }
+    }
+
+    &__phone, &__lng{
+        color: $white;
+        font-family: $ff-wyswyg;
+        font-weight: bold;
+
+        &:hover{
+            cursor: pointer;
+            opacity: .7;
+        }
+    }
+
+    &__phone{
+        display: flex;
+        align-items: center;
+        margin: 0 $distance-20;
+
+        &::before{
+            content: '';
+            background: url('#{$root-img}//svg/call-us.svg') center center no-repeat;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: calc(($distance-20) / 2);
+        }
+    }
+
+    &__lng{
+        display: flex;
+        align-items: center;
+        margin: 0 $distance-20;
+        text-transform: uppercase;
+
+        &::before{
+            content: '';
+            background: url('#{$root-img}//svg/chevron-down.svg') center center no-repeat;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: calc(($distance-20) / 2);
+        }
+    }
+}

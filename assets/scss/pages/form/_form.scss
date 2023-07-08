@@ -1,0 +1,75 @@
+.form{
+    max-width: 1280px;
+    margin: $distance-100 auto;
+    &__title{
+        font-family: $ff-title;
+        font-weight: $ff-bold;
+        font-size: calc((32/16)*1em);
+        text-align: center;
+        margin-bottom: $distance-50 0 0;
+    }
+
+    &__wyswyg{
+        font-family: $ff-wyswyg;
+        font-size: calc((16/16)*1em);
+        line-height: 1.5;
+        color: $text-color;
+        margin-top: $distance-20;
+    }
+
+    &-helper{
+        display: flex;
+    }
+    form {
+        margin-top: $distance-50;
+        .form-row {
+            margin-bottom: 10px;
+        }
+
+        label{
+            font-family: $ff-title;
+            font-size: calc((16/16)*1em);
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-top: $distance-20;
+        }
+
+        input {
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+            border: 1px solid black;
+            border-radius: 5px;
+          }
+          
+        .form-row label {
+            display: block;
+        }
+
+        input{
+            height: 30px;
+        }
+
+        #name{
+            width: 440px;
+            margin-right: 100px;
+        }
+        #surname{
+            width: 730px;
+        }
+        #email{
+            width: 660px;
+            margin-right: 105px;
+        }
+        #phone-number{
+            width:505px
+        }
+        #subject{
+            width: 100%;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+          }
+    }
+      
+}

@@ -1,0 +1,28 @@
+body{
+    margin: 0 !important;
+    overflow-x: hidden;
+
+    &.outside--show{
+        position: fixed;
+        overflow: auto;
+    }
+
+
+}
+body.home{
+    content: '';
+    background: url('#{$root-img}/svg/crane-bg1.svg') 100% 950px no-repeat;
+}
+body.formulario{
+    content: '';
+    background: url('#{$root-img}/svg/crane-bg1.svg') 100% no-repeat;
+}
+
+hr{
+    content: '';
+    background: url('#{$root-img}/svg/footer-hr.svg') center center;
+    width: auto;
+    height:60px;
+    margin:0;
+    border: none;
+}
