@@ -1,0 +1,38 @@
+.trucks{
+    max-width: 1280px;
+    margin: 100px auto;
+    &__title{
+        font-family: $ff-title;
+        font-weight: $ff-bold;
+        font-size: calc((32/16)*1em);
+        text-align: center;
+        margin-bottom: $distance-50 0 0;
+    }
+
+    &__wyswyg{
+        font-family: $ff-wyswyg;
+        font-size: calc((16/16)*1em);
+        line-height: 1.5;
+        color: $text-color;
+        margin-top: $distance-20;
+    }
+
+    &__subtitle{
+        font-family: $ff-title;
+        font-weight: $ff-bold;
+        font-size: calc((32/16)*1em);
+        color: $second-color;
+    }
+
+    &__container{
+        margin-top: $distance-100;
+        display: flex;
+        gap: $distance-50;
+    }
+
+    &__photo{
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.246613);
+        border-radius: 5px;
+        line-height: 0;
+    }
+}

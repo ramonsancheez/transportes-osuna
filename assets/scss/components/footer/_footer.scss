@@ -1,5 +1,5 @@
 .main-footer{
-    background-color: $black;
+    background-image: radial-gradient(#272222 0%, #000000 100%);
     position: sticky;
     top: 100vh;
     padding: 50px 30px 100px;
@@ -25,6 +25,7 @@
         &-phone{
             display: flex;
             align-items: center;
+            font-weight: $ff-bold;
             &::before{
                 content: '';
                 background: url('#{$root-img}/svg/phone-white.svg') center center no-repeat;
@@ -37,6 +38,7 @@
         &-email{
             display: flex;
             align-items: center;
+            font-weight: $ff-bold;
             &::before{
                 content: '';
                 background: url('#{$root-img}/svg/email-white.svg') center center no-repeat;

@@ -49,4 +49,10 @@
             transition: 0.2s;
         }
     }
+    
+    &__photo{
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.246613);
+        border-radius: 5px;
+        line-height: 0;
+    }
 }

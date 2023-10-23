@@ -74,8 +74,12 @@ hr {
   border: none;
 }
 
+img {
+  border-radius: 5px;
+}
+
 .main-footer {
-  background-color: #000000;
+  background-image: radial-gradient(#272222 0%, #000000 100%);
   position: sticky;
   top: 100vh;
   padding: 50px 30px 100px;
@@ -99,6 +103,7 @@ hr {
 .main-footer__contact-phone {
   display: flex;
   align-items: center;
+  font-weight: 600;
 }
 .main-footer__contact-phone::before {
   content: "";
@@ -111,6 +116,7 @@ hr {
 .main-footer__contact-email {
   display: flex;
   align-items: center;
+  font-weight: 600;
 }
 .main-footer__contact-email::before {
   content: "";
@@ -136,7 +142,7 @@ hr {
   z-index: 99999999;
 }
 .main-header__trigger {
-  background: url("/assets/img//svg/meenu-trigger.svg") center center no-repeat;
+  background: url("/assets/img//svg/menu-trigger.svg") center center no-repeat;
   width: 40px;
   height: 15px;
   margin: 0 auto;
@@ -250,7 +256,7 @@ hr {
   justify-content: center;
 }
 .outside__nav {
-  font-family: "Oswald", sans-serif;
+  font-family: "Bangers", cursive;
   text-align: center;
 }
 .outside__nav ul {
@@ -338,7 +344,7 @@ hr {
   opacity: 1;
 }
 .home-welcome__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Bangers", cursive;
   font-weight: 600;
   font-size: 2em;
   opacity: 0;
@@ -351,13 +357,18 @@ hr {
   opacity: 0;
   margin-top: 0;
 }
+.home-welcome__photo {
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.246613);
+  border-radius: 5px;
+  line-height: 0;
+}
 
 .home-projects {
   padding: 100px 0;
   background-color: rgba(175, 175, 175, 0.2);
 }
 .home-projects__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Bangers", cursive;
   font-weight: 600;
   font-size: 2em;
   text-align: center;
@@ -367,7 +378,7 @@ hr {
   padding: 100px 0;
 }
 .home-services__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Bangers", cursive;
   font-weight: 600;
   font-size: 2em;
   text-align: center;
@@ -384,7 +395,7 @@ hr {
   opacity: 0;
 }
 .home-services__service-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Bangers", cursive;
   font-weight: 600;
   font-size: 1.75em;
   margin-bottom: 10px;
@@ -408,13 +419,139 @@ hr {
   opacity: 0.7;
   transition: 0.2s;
 }
+.home-services__photo {
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.246613);
+  border-radius: 5px;
+  line-height: 0;
+}
+
+.gallery {
+  max-width: 1280px;
+  margin: 100px auto;
+}
+.gallery__title {
+  font-family: "Bangers", cursive;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px 0 0;
+}
+.gallery__wyswyg {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+}
+.gallery__list ul {
+  list-style: none;
+  align-items: flex-start;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin-top: 50px;
+}
+.gallery__list ul .gallery__item {
+  overflow: hidden;
+}
+.gallery__list ul .gallery__item img {
+  position: relative;
+}
+.gallery__list ul .gallery__item img:hover {
+  transform: scale(1.2);
+}
+.gallery__list ul .gallery__item::after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FF3131;
+  transition: opacity 0.3s ease-in-out;
+}
+.gallery__list ul .gallery__item::after:hover {
+  opacity: 0.2;
+}
+
+.about-us {
+  max-width: 1280px;
+  margin: 100px auto;
+}
+.about-us__title {
+  font-family: "Bangers", cursive;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px 0 0;
+}
+.about-us__wyswyg {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+}
+.about-us__subtitle {
+  font-family: "Bangers", cursive;
+  font-weight: 600;
+  font-size: 2em;
+}
+.about-us__container {
+  margin-top: 100px;
+}
+.about-us__container:nth-child(odd) {
+  display: flex;
+  gap: 20px;
+}
+.about-us__container:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.trucks {
+  max-width: 1280px;
+  margin: 100px auto;
+}
+.trucks__title {
+  font-family: "Bangers", cursive;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px 0 0;
+}
+.trucks__wyswyg {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+}
+.trucks__subtitle {
+  font-family: "Bangers", cursive;
+  font-weight: 600;
+  font-size: 2em;
+  color: #FF3131;
+}
+.trucks__container {
+  margin-top: 100px;
+  display: flex;
+  gap: 50px;
+}
+.trucks__photo {
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.246613);
+  border-radius: 5px;
+  line-height: 0;
+}
 
 .form {
   max-width: 1280px;
   margin: 100px auto;
 }
 .form__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Bangers", cursive;
   font-weight: 600;
   font-size: 2em;
   text-align: center;
@@ -437,7 +574,7 @@ hr {
   margin-bottom: 10px;
 }
 .form form label {
-  font-family: "Oswald", sans-serif;
+  font-family: "Bangers", cursive;
   font-size: 1em;
   font-weight: 500;
   text-transform: uppercase;

@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
       perPage: 3,
       autoplay: true,
       interval: 2500,
-      arrows: false,
+      // arrows: false,
       breakpoints: {
         767: {
           perPage: 1,

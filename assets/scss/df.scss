@@ -1,4 +1,4 @@
-@import 'variables';
+@import '_variables';
 
 @import 'animations/animations';
 
@@ -13,6 +13,9 @@
 @import 'pages/home/home-welcome';
 @import 'pages/home/home-projects';
 @import 'pages/home/home-services';
+@import 'pages/gallery/gallery.scss';
+@import 'pages/about-us/about-us.scss';
+@import 'pages/trucks/trucks.scss';
 
 @import 'pages/form/form';
 
