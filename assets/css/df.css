@@ -453,6 +453,7 @@ img {
 }
 .gallery__list ul .gallery__item {
   overflow: hidden;
+  border-radius: 5px;
 }
 .gallery__list ul .gallery__item img {
   position: relative;
@@ -544,6 +545,45 @@ img {
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.246613);
   border-radius: 5px;
   line-height: 0;
+}
+
+.services {
+  max-width: 1280px;
+  margin: 100px auto;
+}
+.services__title {
+  font-family: "Bangers", cursive;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 50px 0 0;
+}
+.services__subtitle {
+  font-family: "Bangers", cursive;
+  font-weight: 600;
+  font-size: 2em;
+}
+.services__wyswyg {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+}
+.services__container {
+  margin-top: 100px;
+}
+.services__container:nth-child(odd) {
+  display: flex;
+  gap: 20px;
+}
+.services__container:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+.services__link {
+  text-align: center;
 }
 
 .form {
