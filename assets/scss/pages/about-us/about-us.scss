@@ -17,6 +17,12 @@
         margin-top: $distance-20;
     }
 
+    &__photo{
+        border-radius: 5px;
+        box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+        line-height: 0;
+    }
+
     &__subtitle{
         font-family: $ff-title;
         font-weight: $ff-bold;
@@ -27,13 +33,13 @@
         margin-top: $distance-100;
         &:nth-child(odd){
             display: flex;
-            gap: $distance-20;
+            gap: $distance-50;
         }
 
         &:nth-child(even){
             display: flex;
             flex-direction: row-reverse;
-            gap: $distance-20;
+            gap: $distance-50;
         }
 
     }

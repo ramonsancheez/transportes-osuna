@@ -11,10 +11,14 @@
     &__list{
         display: grid;
         list-style: none;
-        grid-template-columns: repeat(3, 375px);
+        grid-template-columns: repeat(auto-fit, minmax(315px, 375px));
         gap: 90px;
         justify-content: center;
         margin-top: $distance-20;
+
+        @media(max-width: 767px) {
+            padding: 0 20px;
+        }
 
     }
     
@@ -22,10 +26,10 @@
         opacity: 0;
         &-title{
             font-family: $ff-title;
-            font-weight: $ff-bold;
+            font-weight: $ff-regular;
             font-size: calc((28/16)*1em);
-            margin-bottom: calc(($distance-20) / 2);
             color: $second-color;
+            margin-top: 10px;
         }
 
         &-wyswyg{
@@ -33,6 +37,8 @@
             font-size: calc((16/16)*1em);
             line-height: 1.5;
             color: $text-color;
+            margin-top: 10px;
+            text-align: justify;
         }
     }
 
@@ -51,8 +57,12 @@
     }
     
     &__photo{
-        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.246613);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.246613);
         border-radius: 5px;
         line-height: 0;
+
+        img {
+            width: 100%;
+        }
     }
 }

@@ -1,17 +1,31 @@
 .home-welcome{
     display: grid;
-    grid-template-columns: 620px 600px;
-    gap: 20px;
+    display: flex;
+    gap: 50px;
     justify-content: center;
     margin: $distance-100 0;
-    // animation: fadeIn 1.5s ease-in;
-    opacity: 1;
+    @media(max-width: 1300px) {
+        padding: 0 20px;
+    }
+    @media(max-width: 1080px) {
+        flex-wrap: wrap;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 620px;
+        @media(min-width: 1440px) {
+            opacity: 0;
+        }
+    }
 
     &__title{
         font-family: $ff-title;
         font-weight: $ff-bold;
-        font-size: calc((32/16)*1em);
-        opacity: 0;
+        font-size: calc((48/16)*1em);
+        margin-bottom: 0;
     }
 
     &__wyswyg{
@@ -19,13 +33,13 @@
         font-size: calc((16/16)*1em);
         line-height: 1.5;
         color: $text-color;
-        opacity: 0;
-        margin-top: 0;
+        margin-top: 10px;
     }
 
     &__photo{
-        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.246613);
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
         line-height: 0;
+        max-width: 600px;
     }
 }

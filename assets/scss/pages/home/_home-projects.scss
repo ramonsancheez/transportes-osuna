@@ -8,4 +8,23 @@
         font-size: calc((32/16)*1em);
         text-align: center;
     }
+
+    &__carousel {
+        .splide__slide {
+            @media(max-width: 1440px) {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    .splide__slide:not(.is-active){
+        img{
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.246613);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
 }

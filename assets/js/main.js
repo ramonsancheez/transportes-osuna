@@ -1,18 +1,24 @@
 window.addEventListener('DOMContentLoaded', function() {
 
   var splide1Element = document.querySelector("#splide1");
-  if (splide1Element !== null) {
+  if (splide1Element) {
     var splide1 = new Splide(splide1Element, {
-      type: 'loop',
-      gap: "5em",
-      focus: 'center',
+      type   : 'loop',
+      drag   : 'free',
+      arrows : "false",
+      focus  : 'center',
+      arrows: false,
+      focus: "center",
+      gap : 10,
       perPage: 3,
-      autoplay: true,
-      interval: 2500,
-      // arrows: false,
-      breakpoints: {
+      autoScroll: {
+        speed: 1,
+      },
+      perMove: 1,
+      breakpoints : {
         767: {
           perPage: 1,
+          padding: "4em",
         }
       }
     });
@@ -21,11 +27,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   var splide2Element = document.querySelector("#splide2");
-  if (splide2Element !== null) {
+  if (splide2Element) {
     var splide2 = new Splide('#splide2', {
       type: 'loop',
       perPage: 1,
       pagination: false,
+      autoplay: true,
+      interval: 5000,
     });
     
     splide2.mount();
@@ -50,7 +58,7 @@ window.addEventListener('load', function() {
   const spinner = document.querySelector('.loading');
   spinner.remove();
 
-  const homeWelcome = document.querySelectorAll('.home-welcome__title, .home-welcome__wyswyg');
+  const homeWelcome = document.querySelectorAll('.home-welcome__content');
   if(homeWelcome){
       const options = { 
           root: null,

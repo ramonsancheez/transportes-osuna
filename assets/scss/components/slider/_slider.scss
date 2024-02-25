@@ -45,26 +45,16 @@
             left: 9%;
         }
     }
-    .splide{
-        &__title{
-            position: absolute;
-            top:40%;
-            z-index: 999;
-            text-align: center;
-            width: 100%;
-            color: $white;
-            font-family: $sarala;
-            font-size: calc((64/16)*1em);
+}
 
-            &::before{
-                content: '';
-                background: url('#{$root-img}/svg/slide__title-shadow.svg');
-                width: 100%;
-                height: 250px;
-                display: inline-block;
-                position: absolute;
-                top: -90%;
-                z-index: -1;
+#splide2 {
+    .splide__slide {
+        @media(max-width: 767px) {
+            height: 80vh;
+
+            img {
+                min-height: 100%;
+                object-fit: cover;
             }
         }
     }

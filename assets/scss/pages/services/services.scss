@@ -24,6 +24,12 @@
         margin-top: $distance-20;
     }
 
+    &__photo{
+        box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        line-height: 0;
+    }
+
     &__container{
         margin-top: $distance-100;
         &:nth-child(odd){

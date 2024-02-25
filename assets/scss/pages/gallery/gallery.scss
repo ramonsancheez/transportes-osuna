@@ -27,28 +27,27 @@
             margin-top: 50px;
             .gallery__item{
                 overflow: hidden;
-                border-radius: 5px
-                ;
-                img{
-                    position: relative;
-                    &:hover{
-                        transform: scale(1.2);
-                    }
-                }
-                &::after{
-                    opacity: 0;
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: $second-color;
-                    transition: opacity 0.3s ease-in-out;
-                    &:hover{
-                        opacity: 0.2;
-                    }
-                }
+                border-radius: 5px;
+                // img{
+                //     position: relative;
+                //     &:hover{
+                //         transform: scale(1.2);
+                //     }
+                // }
+                // &::after{
+                //     opacity: 0;
+                //     content: "";
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     width: 100%;
+                //     height: 100%;
+                //     background-color: $second-color;
+                //     transition: opacity 0.3s ease-in-out;
+                //     &:hover{
+                //         opacity: 0.2;
+                //     }
+                // }
             }
         }
     }

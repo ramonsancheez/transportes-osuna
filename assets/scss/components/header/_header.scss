@@ -8,6 +8,7 @@
     height: $header-height;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     z-index: $z-header;
+    padding: 0 20px;
 
     &__trigger{
         background: url('#{$root-img}/svg/menu-trigger.svg') center center no-repeat;
@@ -17,6 +18,11 @@
         &:hover{
             cursor: pointer;
             opacity: .7;
+        }
+
+        @media(max-width: 767px) {
+            grid-row: 1;
+            grid-column: 1;
         }
     }
 
@@ -44,6 +50,12 @@
             display: inline-block;
             margin-right: calc(($distance-20) / 2);
         }
+
+        @media(max-width: 767px) {
+            text-indent: -9999em;
+            grid-column: 3;
+            grid-row: 1;
+        }
     }
 
     &__lng{
@@ -60,5 +72,18 @@
             display: inline-block;
             margin-right: calc(($distance-20) / 2);
         }
+
+        @media(max-width: 767px) {
+
+        }
+    }
+}
+
+.logo {
+    @media(max-width: 767px) {
+        grid-column: 1/-1;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
     }
 }

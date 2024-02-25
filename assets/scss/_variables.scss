@@ -5,8 +5,8 @@ $text-color: rgba(0, 0, 0, 0.8);
 $second-color: #FF3131;
 
 //font-family
-$ff-title:'Bangers', cursive;;
-$ff-wyswyg: 'Open Sans', sans-serif;
+$ff-title:'Rubik', sans-serif;
+$ff-wyswyg: 'Quattrocento Sans', sans-serif;
 $sarala: 'Sarala', sans-serif;
 
 // font-weight
@@ -22,6 +22,13 @@ $distance-50: 50px;
 $distance-100: 100px;
 $hr-height: 60px; 
 $distance-200: 200px;
+@media(width < 767px) {
+    $header-height: 80px;
+    $distance-20: 10px;
+    $distance-50: 30px;
+    $distance-100: 50px;
+    $distance-200: 100px;
+}
 
 // z-index
 $z-outside: 999999999;
