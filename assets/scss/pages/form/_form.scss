@@ -1,6 +1,7 @@
 .form{
     max-width: 1280px;
     margin: $distance-100 auto;
+    padding: 0 20px;
     &__title{
         font-family: $ff-title;
         font-weight: $ff-bold;
@@ -19,6 +20,10 @@
 
     &-helper{
         display: flex;
+        flex-wrap: wrap;
+        @media(max-width: 1280px) {
+            flex-direction: column;
+        }
     }
     form {
         margin-top: $distance-50;
@@ -53,17 +58,22 @@
             margin-right: 100px;
         }
         #surname{
-            width: 730px;
+            width: 700px;
         }
         #email{
             width: 660px;
             margin-right: 105px;
         }
         #phone-number{
-            width:505px
+            width:475px
         }
         #subject{
             width: 100%;
+        }
+        #name, #surname, #email, #phone-number, #subject {
+            @media(max-width: 1280px) {
+                width: 100%;
+            }
         }
 
         textarea {

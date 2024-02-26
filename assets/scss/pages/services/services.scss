@@ -1,6 +1,7 @@
 .services{
     max-width: 1280px;
     margin: 100px auto;
+    padding: 0 20px;
 
     &__title{
         font-family: $ff-title;
@@ -14,6 +15,7 @@
         font-family: $ff-title;
         font-weight: $ff-bold;
         font-size: calc((32/16)*1em);
+        color: $second-color;
     }
 
     &__wyswyg{
@@ -42,9 +44,25 @@
             flex-direction: row-reverse;
             gap: $distance-20;
         }
+
+        @media(max-width: 1080px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__link{
         text-align: center;
+    }
+
+    &__content {
+        @media(min-width: 1081px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @media(max-width: 1080px) {
+            max-width: 600px;
+        }
     }
 }

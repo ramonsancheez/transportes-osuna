@@ -15,6 +15,7 @@
         width: 40px;
         height: 15px;
         margin: 0 auto;
+        z-index: 999999999;
         &:hover{
             cursor: pointer;
             opacity: .7;

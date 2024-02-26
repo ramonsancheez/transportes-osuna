@@ -81,6 +81,10 @@ ul[class] {
   list-style: none;
 }
 
+li {
+  margin-left: 1rem;
+}
+
 img, picture, svg {
   height: auto;
   max-width: 100vw;
@@ -140,23 +144,40 @@ img {
   display: grid;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  .main-footer .logo__footer {
+    transform: scale(0.8);
+  }
+}
 .main-footer__content {
   display: flex;
+  flex-wrap: wrap;
   color: #FFFFFF;
   justify-content: space-between;
   max-width: 1240px;
-  margin: 50px auto 0;
+  margin: 0 auto;
   font-family: "Quattrocento Sans", sans-serif;
+}
+@media (max-width: 686px) {
+  .main-footer__content {
+    justify-content: center;
+  }
 }
 .main-footer__title {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 1.75em;
+  margin-top: 50px;
+}
+@media (max-width: 686px) {
+  .main-footer__title {
+    text-align: center;
+  }
 }
 .main-footer__contact-phone {
   display: flex;
   align-items: center;
   font-weight: 600;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 .main-footer__contact-phone::before {
   content: "";
@@ -166,11 +187,19 @@ img {
   display: inline-block;
   margin-right: 10px;
 }
+@media (max-width: 686px) {
+  .main-footer__contact-phone {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
 .main-footer__contact-email {
   display: flex;
   align-items: center;
   font-weight: 600;
-  margin-top: 5px;
+  margin-top: 15px;
+  text-decoration: none;
+  color: white;
 }
 .main-footer__contact-email::before {
   content: "";
@@ -182,6 +211,11 @@ img {
 }
 .main-footer .widget-socialmedia {
   margin-top: 10px;
+}
+@media (max-width: 686px) {
+  .main-footer .widget-socialmedia {
+    justify-content: center;
+  }
 }
 
 .main-header {
@@ -201,6 +235,7 @@ img {
   width: 40px;
   height: 15px;
   margin: 0 auto;
+  z-index: 999999999;
 }
 .main-header__trigger:hover {
   cursor: pointer;
@@ -402,6 +437,13 @@ img {
   }
 }
 
+.slideshow__img {
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
 .home-welcome {
   display: grid;
   display: flex;
@@ -537,6 +579,7 @@ img {
 .gallery {
   max-width: 1280px;
   margin: 100px auto;
+  padding: 0 20px;
 }
 .gallery__title {
   font-family: "Rubik", sans-serif;
@@ -557,17 +600,19 @@ img {
   align-items: flex-start;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin-top: 50px;
 }
 .gallery__list ul .gallery__item {
   overflow: hidden;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 .about-us {
   max-width: 1280px;
-  margin: 100px auto;
+  margin: 200px auto;
+  padding: 0 20px;
 }
 .about-us__title {
   font-family: "Rubik", sans-serif;
@@ -592,9 +637,10 @@ img {
   font-family: "Rubik", sans-serif;
   font-weight: 600;
   font-size: 2em;
+  color: #FF3131;
 }
-.about-us__container {
-  margin-top: 100px;
+.about-us__container:not(:first-child) {
+  margin-top: 200px;
 }
 .about-us__container:nth-child(odd) {
   display: flex;
@@ -605,10 +651,32 @@ img {
   flex-direction: row-reverse;
   gap: 50px;
 }
+@media (max-width: 1080px) {
+  .about-us__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 1081px) {
+  .about-us__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 1080px) {
+  .about-us__content {
+    max-width: 600px;
+  }
+}
 
 .trucks {
   max-width: 1280px;
   margin: 100px auto;
+  padding: 0 20px;
+}
+.trucks article:not(:first-child) {
+  margin-top: 200px;
 }
 .trucks__title {
   font-family: "Rubik", sans-serif;
@@ -624,26 +692,61 @@ img {
   color: rgba(0, 0, 0, 0.8);
   margin-top: 20px;
 }
+.trucks__wyswyg ul li {
+  line-height: 38px;
+}
+.trucks__wyswyg ul li:first-child {
+  margin-top: 10px;
+}
+@media (max-width: 1080px) {
+  .trucks__wyswyg {
+    padding: 0 20px;
+  }
+}
 .trucks__subtitle {
   font-family: "Rubik", sans-serif;
   font-weight: 600;
   font-size: 2em;
   color: #FF3131;
 }
+@media (max-width: 1080px) {
+  .trucks__subtitle {
+    padding: 0 20px;
+  }
+}
 .trucks__container {
   margin-top: 100px;
-  display: flex;
+  display: grid;
   gap: 50px;
+  grid-template-columns: minmax(auto, 600px);
+}
+@media (min-width: 1080px) {
+  .trucks__container {
+    grid-template-columns: 600px auto;
+  }
+}
+@media (max-width: 1080px) {
+  .trucks__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .trucks__photo {
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.246613);
   border-radius: 5px;
   line-height: 0;
 }
+.trucks__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .services {
   max-width: 1280px;
   margin: 100px auto;
+  padding: 0 20px;
 }
 .services__title {
   font-family: "Rubik", sans-serif;
@@ -656,6 +759,7 @@ img {
   font-family: "Rubik", sans-serif;
   font-weight: 600;
   font-size: 2em;
+  color: #FF3131;
 }
 .services__wyswyg {
   font-family: "Quattrocento Sans", sans-serif;
@@ -681,13 +785,32 @@ img {
   flex-direction: row-reverse;
   gap: 20px;
 }
+@media (max-width: 1080px) {
+  .services__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .services__link {
   text-align: center;
+}
+@media (min-width: 1081px) {
+  .services__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 1080px) {
+  .services__content {
+    max-width: 600px;
+  }
 }
 
 .form {
   max-width: 1280px;
   margin: 100px auto;
+  padding: 0 20px;
 }
 .form__title {
   font-family: "Rubik", sans-serif;
@@ -705,6 +828,12 @@ img {
 }
 .form-helper {
   display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 1280px) {
+  .form-helper {
+    flex-direction: column;
+  }
 }
 .form form {
   margin-top: 50px;
@@ -735,17 +864,22 @@ img {
   margin-right: 100px;
 }
 .form form #surname {
-  width: 730px;
+  width: 700px;
 }
 .form form #email {
   width: 660px;
   margin-right: 105px;
 }
 .form form #phone-number {
-  width: 505px;
+  width: 475px;
 }
 .form form #subject {
   width: 100%;
+}
+@media (max-width: 1280px) {
+  .form form #name, .form form #surname, .form form #email, .form form #phone-number, .form form #subject {
+    width: 100%;
+  }
 }
 .form form textarea {
   width: 100%;

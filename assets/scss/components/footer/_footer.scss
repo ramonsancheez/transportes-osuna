@@ -6,19 +6,32 @@
     .logo__footer{
         display: grid;
         justify-content: center;
+
+        @media(max-width: 767px) {
+            transform: scale(0.8);
+        }
     }
     &__content{
         display: flex;
+        flex-wrap: wrap;
         color: $white;
         justify-content: space-between;
         max-width: 1240px;
-        margin: 50px auto 0;
+        margin: 0 auto;
         font-family: $ff-wyswyg;
+        @media(max-width: 686px) {
+            justify-content: center;
+        }
     }
 
     &__title{
         font-family: $ff-wyswyg;
         font-size: calc((28/16)*1em);
+        margin-top: 50px;
+
+        @media(max-width: 686px) {
+            text-align: center;
+        }
     }
 
     &__contact{
@@ -26,7 +39,7 @@
             display: flex;
             align-items: center;
             font-weight: $ff-bold;
-            margin-top: 5px;
+            margin-top: 15px;
             &::before{
                 content: '';
                 background: url('#{$root-img}/svg/phone-white.svg') center center no-repeat;
@@ -35,12 +48,18 @@
                 display: inline-block;
                 margin-right: calc(($distance-20) / 2);
             }
+            @media(max-width: 686px) {
+                justify-content: center;
+                margin-top: 10px;
+            }
         }
         &-email{
             display: flex;
             align-items: center;
             font-weight: $ff-bold;
-            margin-top: 5px;
+            margin-top: 15px;
+            text-decoration: none;
+            color: white;
             &::before{
                 content: '';
                 background: url('#{$root-img}/svg/email-white.svg') center center no-repeat;
@@ -54,5 +73,9 @@
 
     .widget-socialmedia{
         margin-top: calc(($distance-20) / 2);
+
+        @media(max-width: 686px) {
+            justify-content: center;
+        }
     }
 }
