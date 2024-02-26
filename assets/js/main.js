@@ -103,3 +103,36 @@ window.addEventListener('load', function() {
   }
 
 });
+
+function validarFormulario() {
+  var nombre = document.getElementById('name');
+  var apellido = document.getElementById('surname');
+  var email = document.getElementById('email');
+  var telefono = document.getElementById('phone-number');
+  var asunto = document.getElementById('subject');
+  var mensaje = document.getElementById('message');
+
+  var campos = [nombre, apellido, email, telefono, asunto, mensaje];
+  
+  var regexEmail = /\S+@\S+\.\S+/; // Expresión regular para validar correo electrónico básico
+  
+  var formularioValido = true;
+
+  campos.forEach(function(campo) {
+    if (!campo.value.trim()) {
+      campo.classList.add('error');
+      formularioValido = false;
+    } else {
+      campo.classList.remove('error');
+    }
+  });
+
+  if (!regexEmail.test(email.value)) {
+    email.classList.add('error');
+    formularioValido = false;
+  } else {
+    email.classList.remove('error');
+  }
+
+  return formularioValido;
+}

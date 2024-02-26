@@ -1,0 +1,7 @@
+.slideshow {
+    &__img {
+        min-height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}

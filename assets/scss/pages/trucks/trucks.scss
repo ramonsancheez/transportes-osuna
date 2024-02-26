@@ -35,4 +35,10 @@
         border-radius: 5px;
         line-height: 0;
     }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
