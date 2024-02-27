@@ -7,7 +7,6 @@ function ready(fn) {
   }
 
 ready(function() {
-  var body_el = document.querySelector('body');
   var elms = document.getElementsByClassName( 'card__carousel' );
   if(elms){
       for ( var i = 0, len = elms.length; i < len; i++ ) {
@@ -35,14 +34,15 @@ window.addEventListener('DOMContentLoaded', function() {
     var splide1 = new Splide(splide1Element, {
       type   : 'loop',
       drag   : 'free',
-      arrows : "false",
+      arrows : false,
       focus  : 'center',
       arrows: false,
-      focus: "center",
-      gap : 10,
+      gap : 50,
       perPage: 3,
+      interval: 2000,
+      autoplay: true,
       autoScroll: {
-        speed: 1000,
+        speed: 800,
       },
       perMove: 1,
       breakpoints : {
@@ -86,22 +86,19 @@ window.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', function() {
 
-  // const spinner = document.querySelector('.loading');
-  // spinner.remove();
-
-  const homeWelcome = document.querySelectorAll('.home-welcome__content');
+  const homeWelcome = document.querySelectorAll('.home-welcome__content, .home-welcome__photo');
   if(homeWelcome){
       const options = { 
           root: null,
           threshold: 1,
-          rootMargin: "-150px"
+          rootMargin: "50px"
       };
       const observer = new IntersectionObserver(function(entries, observer) {
           entries.forEach(entry => {
               if(!entry.isIntersecting){
                   return; 
               }
-              entry.target.classList.toggle("animate--fade");
+              entry.target.classList.toggle("animate--goUp");
               observer.unobserve(entry.target);
           })
       }, options);

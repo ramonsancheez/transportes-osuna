@@ -4,9 +4,12 @@
             min-height: 100%;
             object-fit: cover;
             width: 100%;
-            @media(min-width: $mq_desktop ){
+            @media(min-width: 1240px ){
                 max-height: 800px;
             }     
+            @media(max-width: 766px) {
+                height: 800px;
+            }
         }
     }
 }

@@ -14,16 +14,13 @@
         grid-template-columns: repeat(auto-fit, minmax(315px, 375px));
         gap: 90px;
         justify-content: center;
-        margin-top: $distance-20;
-
-        @media(max-width: 767px) {
-            padding: 0 20px;
-        }
+        margin-top: 40px;
 
     }
     
     &__service{
-        opacity: 0;
+        margin: 0 auto;
+        max-width: 360px;
         &-title{
             font-family: $ff-title;
             font-weight: $ff-regular;
@@ -43,12 +40,16 @@
     }
 
     &__link{
+        display: flex;
+        justify-content: center;
         font-family: $ff-wyswyg;
         font-size: calc((16/16)*1em);
         text-align: center;
         margin-top: $distance-50;
-        text-decoration: underline;
-
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
         &:hover{
             cursor: pointer;
             opacity: .7;
@@ -62,7 +63,9 @@
         line-height: 0;
 
         img {
-            width: 100%;
+            width: 360px;
+            height: 315px;
+            object-fit: cover;
         }
     }
 }
