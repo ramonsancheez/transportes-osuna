@@ -1,5 +1,35 @@
-window.addEventListener('DOMContentLoaded', function() {
+function ready(fn) {
+  if (document.readyState !== 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+  }
 
+ready(function() {
+  var body_el = document.querySelector('body');
+  var elms = document.getElementsByClassName( 'card__carousel' );
+  if(elms){
+      for ( var i = 0, len = elms.length; i < len; i++ ) {
+              new Splide( elms[ i ], {
+              arrows: true,
+              pagination: false,
+              perPage: 1,
+              breakpoints: {
+                1300: {
+                    arrows: false,
+                    pagination : true,
+                    perPage: 1,
+                },
+            }
+          } 
+          ).mount();
+      }
+  }
+});
+
+
+window.addEventListener('DOMContentLoaded', function() {
   var splide1Element = document.querySelector("#splide1");
   if (splide1Element) {
     var splide1 = new Splide(splide1Element, {
@@ -12,7 +42,7 @@ window.addEventListener('DOMContentLoaded', function() {
       gap : 10,
       perPage: 3,
       autoScroll: {
-        speed: 1,
+        speed: 1000,
       },
       perMove: 1,
       breakpoints : {
@@ -23,6 +53,7 @@ window.addEventListener('DOMContentLoaded', function() {
       }
     });
     splide1.mount();
+    
   }
 
 
@@ -55,8 +86,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', function() {
 
-  const spinner = document.querySelector('.loading');
-  spinner.remove();
+  // const spinner = document.querySelector('.loading');
+  // spinner.remove();
 
   const homeWelcome = document.querySelectorAll('.home-welcome__content');
   if(homeWelcome){

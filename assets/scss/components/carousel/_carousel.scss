@@ -1,5 +1,11 @@
 #splide1{
     .splide{
+        align-items: center;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        
         &__slide{
             img{
                 transform: scale(0.85);

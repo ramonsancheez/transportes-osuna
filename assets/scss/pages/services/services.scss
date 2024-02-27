@@ -30,19 +30,24 @@
         box-shadow: 0 20px 30px rgba(0,0,0,0.2);
         border-radius: 5px;
         line-height: 0;
+
+        img {
+            width: 600px;
+            height: 400px;
+            object-fit: cover;
+        }
     }
 
     &__container{
         margin-top: $distance-100;
+        gap: 50px;
         &:nth-child(odd){
             display: flex;
-            gap: $distance-20;
         }
 
         &:nth-child(even){
             display: flex;
             flex-direction: row-reverse;
-            gap: $distance-20;
         }
 
         @media(max-width: 1080px) {

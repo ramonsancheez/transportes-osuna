@@ -54,13 +54,11 @@
     }
 
     &__content {
+        max-width: 600px;
         @media(min-width: 1081px) {
             display: flex;
             flex-direction: column;
             justify-content: center;
-        }
-        @media(max-width: 1080px) {
-            max-width: 600px;
         }
     }
 }
