@@ -85,17 +85,17 @@ body.outside--show {
 
 body.home {
   content: "";
-  background: url("/app/assets/img//svg/crane-bg1.svg") 100% 950px no-repeat;
+  background: url("/assets/img//svg/crane-bg1.svg") 100% 950px no-repeat;
 }
 
 body.formulario {
   content: "";
-  background: url("/app/assets/img//svg/crane-bg1.svg") 100% no-repeat;
+  background: url("/assets/img//svg/crane-bg1.svg") 100% no-repeat;
 }
 
 hr {
   content: "";
-  background: url("/app/assets/img//svg/footer-hr.svg") center center;
+  background: url("/assets/img//svg/footer-hr.svg") center center;
   width: auto;
   height: 60px;
   margin: 0;
@@ -157,7 +157,7 @@ img {
 }
 .main-footer__contact-phone::before {
   content: "";
-  background: url("/app/assets/img//svg/phone-white.svg") center center no-repeat;
+  background: url("/assets/img//svg/phone-white.svg") center center no-repeat;
   width: 35px;
   aspect-ratio: 1;
   display: inline-block;
@@ -179,7 +179,7 @@ img {
 }
 .main-footer__contact-email::before {
   content: "";
-  background: url("/app/assets/img//svg/email-white.svg") center center no-repeat;
+  background: url("/assets/img//svg/email-white.svg") center center no-repeat;
   width: 35px;
   aspect-ratio: 1;
   display: inline-block;
@@ -219,7 +219,7 @@ img {
   padding: 0 20px;
 }
 .main-header__trigger {
-  background: url("/app/assets/img//svg/menu-trigger.svg") center center no-repeat;
+  background: url("/assets/img//svg/menu-trigger.svg") center center no-repeat;
   width: 40px;
   height: 15px;
   margin: 0 auto;
@@ -251,7 +251,7 @@ img {
 }
 .main-header__phone::before {
   content: "";
-  background: url("/app/assets/img///svg/call-us.svg") center center no-repeat;
+  background: url("/assets/img///svg/call-us.svg") center center no-repeat;
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -272,7 +272,7 @@ img {
 }
 .main-header__lng::before {
   content: "";
-  background: url("/app/assets/img///svg/chevron-down.svg") center center no-repeat;
+  background: url("/assets/img///svg/chevron-down.svg") center center no-repeat;
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -339,7 +339,7 @@ img {
   z-index: 999999999;
 }
 .outside__close {
-  background: url("/app/assets/img///svg/close-white.svg") center center no-repeat;
+  background: url("/assets/img///svg/close-white.svg") center center no-repeat;
   width: 40px;
   height: 40px;
   display: inline-block;
@@ -958,14 +958,14 @@ img {
   width: 100%;
 }
 .widget-socialmedia .widget-facebook {
-  background: url("/app/assets/img//socialmedia/facebook-white.svg") center center no-repeat;
+  background: url("/assets/img//socialmedia/facebook-white.svg") center center no-repeat;
 }
 .widget-socialmedia .widget-instagram {
-  background: url("/app/assets/img//socialmedia/instagram-white.svg") center center no-repeat;
+  background: url("/assets/img//socialmedia/instagram-white.svg") center center no-repeat;
 }
 .widget-socialmedia .widget-whatsapp {
-  background: url("/app/assets/img//socialmedia/whatsapp-white.svg") center center no-repeat;
+  background: url("/assets/img//socialmedia/whatsapp-white.svg") center center no-repeat;
 }
 .widget-socialmedia .widget-youtube {
-  background: url("/app/assets/img//socialmedia/youtube-white.svg") center center no-repeat;
-}
+  background: url("/assets/img//socialmedia/youtube-white.svg") center center no-repeat;
+}/*# sourceMappingURL=df.css.map */
