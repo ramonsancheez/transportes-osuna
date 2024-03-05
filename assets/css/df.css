@@ -86,12 +86,14 @@ body.outside--show {
 
 body.home {
   content: "";
-  background: url("/assets/img//svg/crane-bg1.svg") 100% 950px no-repeat;
+  background: url("/assets/img//svg/crane-bg1.svg") no-repeat;
+  background-size: cover;
 }
 
 body.formulario {
   content: "";
   background: url("/assets/img//svg/crane-bg1.svg") 100% no-repeat;
+  background-size: cover;
 }
 
 hr {

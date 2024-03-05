@@ -11,11 +11,13 @@ body{
 }
 body.home{
     content: '';
-    background: url('#{$root-img}/svg/crane-bg1.svg') 100% 950px no-repeat;
+    background: url('#{$root-img}/svg/crane-bg1.svg') no-repeat;
+    background-size: cover;
 }
 body.formulario{
     content: '';
     background: url('#{$root-img}/svg/crane-bg1.svg') 100% no-repeat;
+    background-size: cover;
 }
 
 hr{
