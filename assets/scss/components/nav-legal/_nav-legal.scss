@@ -5,16 +5,14 @@
     &__list {
         color: white;
         font-size: calc((14 / 16) * 1em);       
-        text-align: start;
+        text-align: center;
         font-family: "Quattrocento Sans", sans-serif;
-
-        [class*='list']{}
 
         [class*='item']{
             display: inline-block;
             list-style: none;
             margin: 5px 0;
-            color: var(--base-text-color);
+            color:white;
 
             &:not(:first-of-type){
                 &:before{
@@ -25,9 +23,8 @@
         }
 
         [class*='link']{
-            color: var(--base-text-color);
+            color:white;
             text-decoration: none;
-            transition: var(--transition-link);
             transition: opacity .5s;
 
             &:hover, &:focus{

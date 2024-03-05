@@ -16,9 +16,12 @@
         height: 15px;
         margin: 0 auto;
         z-index: 999999999;
+        opacity: 1;
+        transition: opacity .5s;
         &:hover{
             cursor: pointer;
             opacity: .7;
+            transition: opacity .5s;
         }
 
         @media(max-width: 767px) {
@@ -31,10 +34,13 @@
         color: $white;
         font-family: $ff-wyswyg;
         font-weight: bold;
+        opacity: 1;
+        transition: opacity .5s;
 
         &:hover{
             cursor: pointer;
             opacity: .7;
+            transition: opacity .5s;
         }
     }
 

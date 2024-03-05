@@ -73,7 +73,7 @@
             <h2 class="form__title">Formulario de consulta y presupuesto</h2>
             <div class="form__wyswyg">Completa nuestro formulario para recibir información detallada y un presupuesto adaptado a tus necesidades específicas. Nuestro equipo experto está listo para brindarte soluciones a medida para tu proyecto. ¡Haz tu solicitud hoy mismo y déjanos ayudarte a hacer realidad tus planes!</div>
             
-                <form action="https://formsubmit.co/info@gruasosuna.com" method="POST">
+                <form action="https://formsubmit.co/info@gruasosuna.com" method="POST" onsubmit="return validarFormulario()">
                     <div class="form-helper">
                         <div class="form-row">
                             <label for="fname">Nombre:</label>
@@ -108,15 +108,19 @@
                         <textarea id="message" name="message"></textarea>
                     </div>
                 
-                    <input type="hidden" name="_autoresponse" value="Gracias por contactar con nosotros! Su correo ha sido recibido y será contestado lo antes posible">
                     <input type="hidden" name="_template" value="box">
                 
+                    <div id="acepto_priv"><input required id="acepto_chk" type="checkbox" name="acepto_chk" value="true">
+						<span style="margin-left:5px" id="acepto-privacidad">Sí, acepto las
+							&nbsp;<a href="/privacidad.html" target="_blank">Condiciones de Privacidad</a>.</span>
+					</div>
+
                     <input type="submit" value="Enviar">
                 </form>
             </div>
             
             <section>
-                <div id="splide1" class="home-projects splide" aria-label="Splide Basic HTML Example">
+                <div id="splide1" class="home-projects splide">
                     <h2 class="home-projects__title">Algunos de nuestros proyectos</h2>
                     <div class="splide__track">
                         <ul class="splide__list">

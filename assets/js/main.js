@@ -132,35 +132,66 @@ window.addEventListener('load', function() {
 
 });
 
+document.querySelector('form').addEventListener('submit', function(e) {
+  if (!validarFormulario()) {
+      e.preventDefault();
+  }
+});
+
 function validarFormulario() {
-  var nombre = document.getElementById('name');
-  var apellido = document.getElementById('surname');
-  var email = document.getElementById('email');
-  var telefono = document.getElementById('phone-number');
-  var asunto = document.getElementById('subject');
-  var mensaje = document.getElementById('message');
+  var nombre = document.getElementById('name').value;
+  var apellidos = document.getElementById('surname').value;
+  var subject = document.getElementById('subject').value;
+  var email = document.getElementById('email').value;
+  var telefono = document.getElementById('phone-number').value;
+  var mensaje = document.getElementById('message').value;
 
-  var campos = [nombre, apellido, email, telefono, asunto, mensaje];
-  
-  var regexEmail = /\S+@\S+\.\S+/; // Expresión regular para validar correo electrónico básico
-  
-  var formularioValido = true;
+  var regexTelefono = /^[0-9]+$/;
+  var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  campos.forEach(function(campo) {
-    if (!campo.value.trim()) {
-      campo.classList.add('error');
-      formularioValido = false;
-    } else {
-      campo.classList.remove('error');
-    }
-  });
+  var camposValidos = true;
 
-  if (!regexEmail.test(email.value)) {
-    email.classList.add('error');
-    formularioValido = false;
+  if (nombre === '') {
+      camposValidos = false;
+      document.getElementById('name').classList.add('error');
   } else {
-    email.classList.remove('error');
+      document.getElementById('name').classList.remove('error');
   }
 
-  return formularioValido;
+  if (apellidos === '') {
+      camposValidos = false;
+      document.getElementById('surname').classList.add('error');
+  } else {
+      document.getElementById('surname').classList.remove('error');
+  }
+
+  if (subject === '') {
+    camposValidos = false;
+    document.getElementById('subject').classList.add('error');
+  } else {
+      document.getElementById('subject').classList.remove('error');
+  }
+
+  if (!regexEmail.test(email)) {
+      camposValidos = false;
+      document.getElementById('email').classList.add('error');
+  } else {
+      document.getElementById('email').classList.remove('error');
+  }
+
+  if (!regexTelefono.test(telefono)) {
+      camposValidos = false;
+      document.getElementById('phone-number').classList.add('error');
+  } else {
+      document.getElementById('phone-number').classList.remove('error');
+  }
+
+  if (mensaje === '') {
+      camposValidos = false;
+      document.getElementById('message').classList.add('error');
+  } else {
+      document.getElementById('message').classList.remove('error');
+  }
+
+  return camposValidos;
 }
