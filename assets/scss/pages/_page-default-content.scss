@@ -1,0 +1,18 @@
+.page-default-content {
+    max-width: 940px;
+    margin: $distance-50 auto;
+    font-family: "Quattrocento Sans", sans-serif;
+    line-height: 32px;
+    h1 {
+        text-align: center;
+        font-size: calc((32/16)*1em);
+        font-weight: $ff-bold;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-size: calc((22/16)*1em);
+        font-weight: $ff-bold;
+    }
+}

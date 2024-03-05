@@ -1,0 +1,40 @@
+.nav-legal {
+    max-width: 1240px;
+    margin: $distance-50 auto;
+
+    &__list {
+        color: white;
+        font-size: calc((14 / 16) * 1em);       
+        text-align: start;
+        font-family: "Quattrocento Sans", sans-serif;
+
+        [class*='list']{}
+
+        [class*='item']{
+            display: inline-block;
+            list-style: none;
+            margin: 5px 0;
+            color: var(--base-text-color);
+
+            &:not(:first-of-type){
+                &:before{
+                    content: '·';
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        [class*='link']{
+            color: var(--base-text-color);
+            text-decoration: none;
+            transition: var(--transition-link);
+            transition: opacity .5s;
+
+            &:hover, &:focus{
+                opacity: .7;
+                transition: opacity .5s;
+            }
+        }
+    }
+
+}
