@@ -514,6 +514,9 @@ img {
     opacity: 0;
   }
 }
+.home-welcome img {
+  width: 600px;
+}
 
 .home-projects {
   padding: 100px 0;
@@ -770,6 +773,11 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.trucks img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
 }
 
 .services {
